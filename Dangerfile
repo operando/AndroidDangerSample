@@ -20,6 +20,6 @@ f = active_files.select { |file| file.start_with? dir }
 
 f.each do |file|
   features.each do |k,v|
-    warn "#{v}" if file.start_with? dir + k
+    warn "#{v}" if file.start_with? dir + k.to_s
   end
 end
